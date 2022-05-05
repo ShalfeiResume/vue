@@ -1,5 +1,5 @@
 import menuApi from "@/api/menu";
-import { AxiosResponse } from "axios";
+import { AxiosError, AxiosResponse } from "axios";
 
 export interface IMenuState {
   language: string;
@@ -166,8 +166,8 @@ const actions = {
           context.commit(mutationTypes.getCurrentUserSuccess, user);
           resolve(user);
         })
-        .catch((error: AxiosResponse<IErrorUser>) => {
-          context.commit(mutationTypes.getCurrentUserFailure, error);
+        .catch((error: AxiosError<IErrorUser>) => {
+          context.commit(mutationTypes.getCurrentUserFailure, error?.response);
         });
     });
   },
@@ -180,10 +180,11 @@ const actions = {
           context.commit(mutationTypes.signInCurrentUserSuccess, user);
           resolve(user);
         })
-        .catch((error: AxiosResponse<IErrorUser>) => {
-          const m = error;
-          debugger;
-          context.commit(mutationTypes.signInCurrentUserFailure, error);
+        .catch((error: AxiosError<IErrorUser>) => {
+          context.commit(
+            mutationTypes.signInCurrentUserFailure,
+            error?.response
+          );
         });
     });
   },
@@ -196,8 +197,8 @@ const actions = {
           context.commit(mutationTypes.getCurrentUserSuccess, user);
           resolve(user);
         })
-        .catch((error: AxiosResponse<IErrorUser>) => {
-          context.commit(mutationTypes.getCurrentUserFailure, error);
+        .catch((error: AxiosError<IErrorUser>) => {
+          context.commit(mutationTypes.getCurrentUserFailure, error?.response);
         });
     });
   },
