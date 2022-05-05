@@ -1,0 +1,48 @@
+const messages = {
+  En: {
+    menu: {
+      brand: "Shalfei resume",
+      about: "About project",
+      todoList: "Todo List",
+      signUp: "Sign up",
+      signIn: "Sign in",
+      lang: "Lang",
+      user: "User",
+      login: "Login",
+      enterLogin: "Enter login",
+      email: "Email",
+      enterEmail: "Enter email address",
+      password: "Password",
+      enterPassword: "Enter password",
+      submit: "Send",
+      reset: "Reset",
+      errorMessageLogin: "Enter a correct login",
+      errorMessagePassword: "Enter a correct password",
+      errorMessageEmail: "Enter a correct email",
+    },
+  },
+  Ru: {
+    menu: {
+      brand: "Shalfei resume",
+      about: "О проекте",
+      todoList: "Список задач",
+      signUp: "Регистрация",
+      signIn: "Авторизация",
+      lang: "Язык",
+      user: "Пользователь",
+      login: "Логин",
+      enterLogin: "Укажите логин",
+      email: "Почта",
+      enterEmail: "Укажите почтовый адрес",
+      password: "Пароль",
+      enterPassword: "Укажите пароль",
+      submit: "Отправить",
+      reset: "Сбросить",
+      errorMessageLogin: "Укажите корректное значение логина",
+      errorMessagePassword: "Укажите корректное значение пароля",
+      errorMessageEmail: "Укажите корректное значение почты",
+    },
+  },
+};
+
+export default messages;
